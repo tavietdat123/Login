@@ -10,7 +10,7 @@ export const setLocale = (locale: string) => {
   return setLocaleAction(locale);
 };
 
-const setLocaleAction = createCustomAction('setLocale', (locale: string) => ({
+export const setLocaleAction = createCustomAction('setLocale', (locale: string) => ({
   locale,
 }));
 

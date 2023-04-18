@@ -1,3 +1,22 @@
 {
-  "welcome": "Hello"
+  "welcome": "Hello",
+  "email": "Address Email",
+  "password": "Password",
+  "rememberMe": "Save password information",
+  "emailRequire": "Please enter your email address",
+  "emailInvalid": "Email address is not valid",
+  "passwordRequire": "Please enter a password",
+  "minPasswordInvalid": "Password minimum 4 characters",
+  "register": "Log in",
+  "signUp": "Register",
+  "want": "Do not have an account?",
+  "login": "Do you already have an account",
+  "repeatPassword": "Enter the password",
+  "fullName": "Full name",
+  "sex": "Gender",
+  "region": "Nation",
+  "city": "City",
+  "placeholderSelect": "Choose an option",
+  "require": "Please enter this field",
+  "passWordNotMatch": "Password does not match"
 }

@@ -4,6 +4,7 @@ import { Button, Col, Form, Row } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../../configs/routes';
+import SwitchLanguage from './SwitchLanguage';
 interface Props {
   onLogin(values: ILoginParams): void;
   loading: boolean;
@@ -40,6 +41,8 @@ function LoginFormV2({ onLogin, loading, errorMessage }: Props) {
           {errorMessage}
         </div>
       )}
+      <SwitchLanguage />
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Col md={12}>

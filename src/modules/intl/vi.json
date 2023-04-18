@@ -1,8 +1,8 @@
 {
-  "welcome": "Xin chào",
-  "email": "Địa chỉ Email",
-  "password": "Mật khẩu",
-  "rememberMe": "Lưu thông tin đăng nhập",
+  "welcome": "xin Chào",
+  "email": "Địa Chỉ Email",
+  "password": "Mật Khẩu",
+  "rememberMe": "Lưu Thông Tin Đăng Nhập",
   "emailRequire": "Vui lòng nhập địa chỉ email",
   "emailInvalid": "Địa chỉ email không hợp lệ",
   "passwordRequire": "Vui lòng nhập mật khẩu",

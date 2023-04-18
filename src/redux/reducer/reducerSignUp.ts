@@ -24,7 +24,6 @@ export interface InitSignup {
   errorMessage: string;
 }
 const SignUpReducer = (state = initialState, action: Action) => {
-  console.log(action);
   switch (action.type) {
     case GET_REGION_SUCCESS:
       return {

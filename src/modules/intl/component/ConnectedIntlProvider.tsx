@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 import { AppState } from '../../../redux/reducer/reducer';
 import enMessages from '../en.json';
 import viMessages from '../vi.json';
-
-function getMessages(locale: string): any {
-  if (locale.startsWith('vi')) {
-    return viMessages;
+import cnMessages from '../cn.json';
+export function getMessages(locale: string): any {
+  if (locale.startsWith('en')) {
+    return enMessages;
+  } else if (locale.startsWith('cn')) {
+    return cnMessages;
   }
-  return enMessages;
+  return viMessages;
 }
-
 function mapStateToProps(state: AppState) {
   return {
     locale: state.intl.locale,

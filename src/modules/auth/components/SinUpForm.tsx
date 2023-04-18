@@ -8,6 +8,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRegion, getState, setErrorMessge } from '../../../redux/actions/actionSignUp';
 import { regionSelector, stateSelector } from '../../../redux/selector/SigupSelector';
+import SwitchLanguage from './SwitchLanguage';
+
+// import { language } from './SwitchLanguage';
 interface Props {
   onLogin(values: ILoginParams): void;
   loading: boolean;
@@ -77,6 +80,7 @@ function SignUpForm({ onLogin, loading, errorMessage }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentRegion]);
   const password = watch('password');
+
   return (
     <div className="mt-2 mb-5" style={{ maxWidth: '560px', width: '100%' }}>
       {!!errorMessage && (
@@ -84,6 +88,7 @@ function SignUpForm({ onLogin, loading, errorMessage }: Props) {
           {errorMessage}
         </div>
       )}
+      <SwitchLanguage />
       <form onSubmit={handleSubmit(onSubmit)}>
         <Row>
           <Col md={12}>
