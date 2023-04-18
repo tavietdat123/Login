@@ -43,11 +43,16 @@ export const registerAction = (value: ISignUpParams): ThunkAction<void, AppState
       dispatch({ type: ON_LOADING });
       const response = await register(value);
       dispatch({ type: OFF_LOADING });
-      Cookies.set(ACCESS_TOKEN_KEY, response.data.token, { expires: 7 });
-      dispatch(replace(ROUTES.home));
-      toast.success('Đăng nhập thành công');
+      console.log(response);
+      if (!response.data.error) {
+        Cookies.set(ACCESS_TOKEN_KEY, response.data.data.token, { expires: 7 });
+        dispatch(replace(ROUTES.home));
+        toast.success('Đăng nhập thành công');
+      } else if (response.data.error) {
+        console.log(response.data.error);
+        dispatch({ type: ERROR_MESSAGE, payload: getErrorMessageResponse(response.data) });
+      }
     } catch (error: any) {
-      console.log(error);
       dispatch({ type: OFF_LOADING });
       dispatch({ type: ERROR_MESSAGE, payload: getErrorMessageResponse(error.response.data) });
     }
