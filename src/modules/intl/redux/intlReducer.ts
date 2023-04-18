@@ -10,7 +10,7 @@ export const setLocale = (locale: string) => {
   return setLocaleAction(locale);
 };
 
-export const setLocaleAction = createCustomAction('setLocale', (locale: string) => ({
+const setLocaleAction = createCustomAction('setLocale', (locale: string) => ({
   locale,
 }));
 
@@ -18,7 +18,7 @@ const actions = { setLocale };
 
 type Action = ActionType<typeof actions>;
 
-export default function reducer(state: IntlState = { locale: 'en' }, action: Action) {
+export default function reducer(state: IntlState = { locale: 'vi' }, action: Action) {
   switch (action.type) {
     case getType(setLocaleAction):
       return { ...state, locale: action.locale };
