@@ -2,6 +2,8 @@ import { Controller, useForm } from 'react-hook-form';
 import { ILoginParams } from '../../../models/auth';
 import { Button, Col, Form, Row } from 'react-bootstrap';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../../configs/routes';
 interface Props {
   onLogin(values: ILoginParams): void;
   loading: boolean;
@@ -109,6 +111,14 @@ function LoginFormV2({ onLogin, loading, errorMessage }: Props) {
               {loading && <div className="spinner me-2"></div>}
               <FormattedMessage id="register" />
             </Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12} className="d-flex justify-content-center mt-3">
+            <FormattedMessage id="want" />{' '}
+            <Link to={ROUTES.signup}>
+              <FormattedMessage id="signUp" />{' '}
+            </Link>
           </Col>
         </Row>
       </form>

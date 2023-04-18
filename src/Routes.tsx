@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { ROUTES } from './configs/routes';
 import ProtectedRoute from './modules/common/components/ProtectedRoute';
+import SignUpPage from './modules/auth/pages/SignUpPage';
 
 const HomePage = lazy(() => import('./modules/home/pages/HomePage'));
 const ContactPage = lazy(() => import('./modules/home/pages/ContactPage'));
@@ -18,8 +19,9 @@ export const Routes = (props: Props) => {
         <Route path={ROUTES.login} component={LoginPage} />
         <ProtectedRoute path={ROUTES.home} component={HomePage} />
         <Route path={ROUTES.contact} component={ContactPage} />
+        <Route path={ROUTES.signup} component={SignUpPage} />
 
-        <Route path="/" component={LoginPage} />
+        <Route path="/" component={SignUpPage} />
       </Switch>
     </Suspense>
   );

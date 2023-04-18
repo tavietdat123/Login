@@ -1,6 +1,6 @@
 import { IntlProvider } from 'react-intl';
 import { connect } from 'react-redux';
-import { AppState } from '../../../redux/reducer';
+import { AppState } from '../../../redux/reducer/reducer';
 import enMessages from '../en.json';
 import viMessages from '../vi.json';
 

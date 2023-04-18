@@ -7,5 +7,16 @@
   "emailInvalid": "Địa chỉ email không hợp lệ",
   "passwordRequire": "Vui lòng nhập mật khẩu",
   "minPasswordInvalid": "Mật khẩu tối thiểu 4 ký tự",
-  "register": "Đăng nhập"
+  "register": "Đăng nhập",
+  "signUp": "Đăng kí",
+  "want": "Bạn chưa có tài khoản?",
+  "login": "Bạn đã có tài khoản",
+  "repeatPassword": "Nhập lại mật khẩu",
+  "fullName": "Họ và tên",
+  "sex": "Giới tính",
+  "region": "Quốc gia",
+  "city": "Thành phố",
+  "placeholderSelect": "Chọn một lựa chọn",
+  "require": "Vui lòng nhập trường này",
+  "passWordNotMatch": "Mật khẩu không trùng khớp"
 }
