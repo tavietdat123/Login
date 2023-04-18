@@ -1,3 +1,22 @@
 {
-  "欢迎": "你好"
+  "欢迎": "你好",
+  "email": "电子邮件地址",
+  "password": "密码",
+  "rememberMe": "保存登录",
+  "emailRequire": "请输入您的电子邮件地址",
+  "emailInvalid": "电子邮件地址无效",
+  "passwordRequire": "请输入密码",
+  "minPasswordInvalid": "密码最少 4 个字符",
+  "register": "登录",
+  "signUp": "登记",
+  "want": "还没有账号？",
+  "login": "你是不是已经有一个账号",
+  "repeatPassword": "输入密码",
+  "fullName": "名字和姓氏",
+  "sex": "性别",
+  "region": "国家",
+  "city": "城市",
+  "placeholderSelect": "选择一个选项",
+  "require": "请输入此字段",
+  "passWordNotMatch": "密码不匹配"
 }

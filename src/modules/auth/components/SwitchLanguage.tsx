@@ -7,6 +7,7 @@ import { LS_LANG } from '../../intl/constants';
 export const language = [
   { title: 'Việt Nam', code: 'vi' },
   { title: 'English', code: 'en' },
+  { title: '中国', code: 'cn' },
 ];
 
 function SwitchLanguage() {
