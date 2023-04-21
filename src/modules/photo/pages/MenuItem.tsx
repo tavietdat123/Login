@@ -40,6 +40,7 @@ function MenuItem({ data, handleChangeConfirm, reset, handlech }: Props) {
       setValue(title);
       if (typeof handlech === 'function') handlech();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reset]);
 
   return (

@@ -30,7 +30,6 @@ function Photo() {
       dispatch(getPhoto(prev, count.current));
     }
   };
-  console.log(swithTitle);
   const handleChangeConfirm = useCallback((title: string, id: number, xitem?: boolean) => {
     setSwithTitle((prev) => {
       const check = prev.some((el) => {
@@ -72,11 +71,13 @@ function Photo() {
   }, []);
   useEffect(() => {
     dispatch(getPhoto(count.current, count.current + 10));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     // Thêm sự kiện lắng nghe cuộn trang
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Container fluid style={{ width: '100%', minHeight: '100vh' }}>
