@@ -65,3 +65,26 @@
     transform: rotate(1turn);
   }
 }
+
+.shapes {
+  width: 24.8px;
+  height: 24.8px;
+  color: red;
+  background: conic-gradient(from -45deg at top 22.4px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg),
+    conic-gradient(from 45deg at right 22.4px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg),
+    conic-gradient(from 135deg at bottom 22.4px left 50%, #0000, currentColor 1deg 90deg, #0000 91deg),
+    conic-gradient(from -135deg at left 22.4px top 50%, #0000, currentColor 1deg 90deg, #0000 91deg);
+  animation: shapes-q299i1md 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes shapes-q299i1md {
+  50% {
+    width: 47.19999999999999px;
+    height: 47.19999999999999px;
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

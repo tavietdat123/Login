@@ -13,7 +13,7 @@ const initialState = {
   loading: false,
   errorMessage: '',
 };
-interface Action {
+export interface Action {
   type: string;
   payload?: any;
 }

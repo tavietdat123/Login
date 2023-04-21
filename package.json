@@ -23,6 +23,7 @@
     "react-bootstrap": "^2.7.4",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.43.9",
+    "react-intersection-observer": "^9.4.3",
     "react-intl": "^5.20.10",
     "react-redux": "^7.2.6",
     "react-router": "^5.2.1",
