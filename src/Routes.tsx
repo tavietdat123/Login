@@ -23,7 +23,7 @@ export const Routes = (props: Props) => {
         <Route path={ROUTES.signup} component={SignUpPage} />
         <Route path={ROUTES.photo} component={Photo} />
 
-        <Route path="/" component={Photo} />
+        <Route path="/" component={HomePage} />
       </Switch>
     </Suspense>
   );

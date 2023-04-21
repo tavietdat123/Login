@@ -1,4 +1,4 @@
-export const ROUTES = {
+export const ROUTES: { [key: string]: string } = {
   home: '/home',
   contact: '/contact',
   login: '/login',
