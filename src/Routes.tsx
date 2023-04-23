@@ -4,6 +4,7 @@ import { ROUTES } from './configs/routes';
 import ProtectedRoute from './modules/common/components/ProtectedRoute';
 import SignUpPage from './modules/auth/pages/SignUpPage';
 import Photo from './modules/photo/pages/PhotoPage';
+import Filter from './modules/table/page/Filter';
 
 const HomePage = lazy(() => import('./modules/home/pages/HomePage'));
 const ContactPage = lazy(() => import('./modules/home/pages/ContactPage'));
@@ -22,6 +23,7 @@ export const Routes = (props: Props) => {
         <Route path={ROUTES.contact} component={ContactPage} />
         <Route path={ROUTES.signup} component={SignUpPage} />
         <Route path={ROUTES.photo} component={Photo} />
+        <Route path={ROUTES.filter} component={Filter} />
 
         <Route path="/" component={HomePage} />
       </Switch>

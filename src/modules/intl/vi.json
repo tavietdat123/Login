@@ -18,5 +18,6 @@
   "city": "Thành phố",
   "placeholderSelect": "Chọn một lựa chọn",
   "require": "Vui lòng nhập trường này",
-  "passWordNotMatch": "Mật khẩu không trùng khớp"
+  "passWordNotMatch": "Mật khẩu không trùng khớp",
+  "PayrollTransactionsList": "Danh sách giao dịch bảng lương"
 }

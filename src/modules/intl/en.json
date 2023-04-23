@@ -18,5 +18,6 @@
   "city": "City",
   "placeholderSelect": "Choose an option",
   "require": "Please enter this field",
-  "passWordNotMatch": "Password does not match"
+  "passWordNotMatch": "Password does not match",
+  "PayrollTransactionsList": "Payroll Transactions List"
 }

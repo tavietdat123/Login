@@ -11,7 +11,7 @@ const HomePage = (props: Props) => {
     <div className="d-flex p-3" style={{ height: '50px' }}>
       {title.map((el: string, index: number) => {
         return (
-          <Link to={newRoutes[index]} className="ms-5">
+          <Link to={newRoutes[index]} key={index} className="ms-5">
             <Button key={index}>{el}</Button>
           </Link>
         );

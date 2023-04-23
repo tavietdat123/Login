@@ -1,0 +1,139 @@
+.input {
+  margin-right: 20px;
+  flex: 1;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: 600;
+  color: #3d3d3d;
+  outline: #adaeaf;
+  border: 1px solid #e7e8ea;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.btn_filter {
+  width: 100%;
+  border-radius: 6px;
+  border: 3px solid;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:first-child {
+    color: #67aec3;
+    border-color: #67aec3;
+    box-shadow: 1px 1px 1px 1px 1px #67aec3;
+    &:hover {
+      background-color: #67aec3;
+      color: #fff;
+    }
+  }
+  &:last-child {
+    color: #f56a9b;
+    border-color: #f56a9b;
+    box-shadow: 1px 1px 1px 1px 1px #f56a9b;
+    &:hover {
+      color: #fff;
+      background-color: #f56a9b;
+    }
+  }
+}
+.btn_filter + .btn_filter {
+  margin-left: 10px;
+}
+::-webkit-input-placeholder {
+  /* Định dạng cho trình duyệt Chrome */
+  color: #aaa;
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  /* Định dạng cho trình duyệt Firefox */
+  color: #aaa;
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  /* Định dạng cho trình duyệt Microsoft Edge */
+  color: #aaa;
+  font-style: italic;
+}
+
+::placeholder {
+  /* Định dạng cho các trình duyệt khác */
+  color: #aaa;
+  font-style: italic;
+}
+.wrapperTableItem {
+  background-color: #fff;
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+  overflow: hidden;
+  td {
+    font-weight: 600;
+    max-width: 200px;
+    height: 1.2em;
+    padding: 20px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 100px;
+    text-overflow: ellipsis;
+  }
+}
+.wrapperTableItem + .wrapperTableItem {
+  margin-top: 10px;
+}
+th {
+  padding: 10px 15px;
+}
+.active_number {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  background-color: #32abd6;
+  color: #fff;
+}
+.number {
+  margin: 0 18px;
+  user-select: none;
+
+  a {
+    display: block;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.previous-button,
+.next-button {
+  user-select: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+.previous-button.disabled,
+.next-button.disabled {
+  cursor: default;
+  svg {
+    cursor: default;
+
+    color: #ccc;
+  }
+}

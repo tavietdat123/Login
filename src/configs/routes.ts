@@ -4,4 +4,5 @@ export const ROUTES: { [key: string]: string } = {
   login: '/login',
   signup: '/signup',
   photo: '/photo',
+  filter: '/filter',
 };
