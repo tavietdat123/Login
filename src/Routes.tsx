@@ -2,13 +2,13 @@ import React, { lazy, Suspense } from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { ROUTES } from './configs/routes';
 import ProtectedRoute from './modules/common/components/ProtectedRoute';
-import SignUpPage from './modules/auth/pages/SignUpPage';
-import Photo from './modules/photo/pages/PhotoPage';
-import Filter from './modules/table/page/Filter';
 
 const HomePage = lazy(() => import('./modules/home/pages/HomePage'));
 const ContactPage = lazy(() => import('./modules/home/pages/ContactPage'));
 const LoginPage = lazy(() => import('./modules/auth/pages/LoginPage'));
+const SignUpPage = lazy(() => import('./modules/auth/pages/SignUpPage'));
+const Photo = lazy(() => import('./modules/photo/pages/PhotoPage'));
+const Filter = lazy(() => import('./modules/table/page/Filter'));
 
 interface Props {}
 
@@ -24,7 +24,6 @@ export const Routes = (props: Props) => {
         <Route path={ROUTES.signup} component={SignUpPage} />
         <Route path={ROUTES.photo} component={Photo} />
         <Route path={ROUTES.filter} component={Filter} />
-
         <Route path="/" component={HomePage} />
       </Switch>
     </Suspense>

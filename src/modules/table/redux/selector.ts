@@ -23,16 +23,6 @@ export const payrollRemaining = createSelector(
     if (!client && !status && !dateFrom && !dateTo && !invoice) {
       return listData;
     }
-    // ...listData.filter((el) => el.client === client),
-    // ...listData.filter((el) => el.status === status),
-    // ...listData.filter((el) => {
-
-    //   const date = moment(el.date);
-    //   const date1 = moment(dateFrom);
-    //   const date2 = moment(dateTo);
-    //   return date.isBefore(date2) && date.isAfter(date1);
-    // }),
-    // ...listData.filter((el) => el.invoice === invoice),
     let newListData: Array<Payroll | undefined> = [];
 
     if (client) {
