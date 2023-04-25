@@ -24,4 +24,6 @@ export const API_PATHS = {
   region: `${getBaseUrl(APIService.public)}/location`,
   state: `${getBaseUrl(APIService.public)}/location?pid=`,
   signUp: `${getBaseUrl(APIService.auth)}/register`,
+  profile: `${getBaseUrl(APIService.public)}/user`,
+  product: `${getBaseUrl(APIService.public)}/product`,
 };

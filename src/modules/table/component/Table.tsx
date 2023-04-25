@@ -28,6 +28,7 @@ function Table() {
               <th>Currency</th>
               <th>Total</th>
               <th>Invoice</th>
+              <th>Detail</th>
               <th>Action</th>
             </tr>
           </thead>

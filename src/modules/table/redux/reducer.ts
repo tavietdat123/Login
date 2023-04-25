@@ -1,6 +1,12 @@
-import { toast } from 'react-toastify';
 import { FormData } from '../component/FilterComponent';
-import { DELETE_PAYROLL, GET_FILTER, GET_PAYROLL_SUCCESS, OFF_LOADING_FILTER, ON_LOADING_FILTER } from './action';
+import {
+  DELETE_PAYROLL_SUCCESS,
+  GET_CURRENT_PRODUCT,
+  GET_FILTER,
+  GET_PAYROLL_SUCCESS,
+  OFF_LOADING_FILTER,
+  ON_LOADING_FILTER,
+} from './action';
 
 const intlPayroll = {
   payrollTransactionsList: [],
@@ -12,21 +18,39 @@ const intlPayroll = {
     dateTo: '',
     invoice: '',
   },
+  currentProduct: {
+    id: 0,
+    status: '',
+    currency: '',
+    fundingMethod: '',
+    total: 0,
+    order: '',
+    client: '',
+    invoice: '',
+    createdBy: 0,
+    createdAt: '',
+    updatedAt: '',
+  },
 };
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export interface intlPayroll {
   payrollTransactionsList: Payroll[];
   loading: boolean;
   filter: FormData;
+  currentProduct: Payroll;
 }
 export interface Payroll {
   id: number;
   status: string;
-  date: string;
+  currency: string;
+  fundingMethod: string;
+  total: number;
+  order: string;
   client: string;
-  currentcy: string;
-  tolal: number;
   invoice: string;
+  createdBy: number;
+  createdAt: string;
+  updatedAt: string;
 }
 interface Action {
   type: string;
@@ -58,11 +82,15 @@ export default function payrollReducer(state: intlPayroll = intlPayroll, action:
           invoice: action.payload.invoice,
         },
       };
-    case DELETE_PAYROLL:
-      toast.success('Xóa thành công');
+    case DELETE_PAYROLL_SUCCESS:
       return {
         ...state,
         payrollTransactionsList: state.payrollTransactionsList.filter((el) => el.id !== action.payload),
+      };
+    case GET_CURRENT_PRODUCT:
+      return {
+        ...state,
+        currentProduct: action.payload,
       };
     default:
       return state;

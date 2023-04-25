@@ -6,6 +6,7 @@ import { Payroll } from './reducer';
 export const LoadingFilterSelector = (state: AppState) => state.payroll.loading;
 export const payrollSelector = (state: AppState) => state.payroll.payrollTransactionsList;
 export const filterSelector = (state: AppState) => state.payroll.filter;
+export const currentProductSelector = (state: AppState) => state.payroll.currentProduct;
 export const clientSelector = (state: AppState) => {
   const newdata: Array<string> = state.payroll.payrollTransactionsList.map((el) => el.client);
   const uniqueArr = [...new Set(newdata)];
@@ -39,7 +40,7 @@ export const payrollRemaining = createSelector(
       if (newListData.length === 0) {
         newListData = [
           ...listData.filter((el) => {
-            const date = moment(el.date);
+            const date = moment(el.createdAt);
             const date1 = moment(dateFrom);
             const date2 = moment(dateTo);
             return date.isBefore(date2) && date.isAfter(date1);
@@ -48,7 +49,7 @@ export const payrollRemaining = createSelector(
       } else if (newListData.length > 0) {
         newListData = [
           ...newListData.filter((el: any) => {
-            const date = moment(el.date);
+            const date = moment(el.createdAt);
             const date1 = moment(dateFrom);
             const date2 = moment(dateTo);
             return date.isBefore(date2) && date.isAfter(date1);
@@ -58,9 +59,9 @@ export const payrollRemaining = createSelector(
     }
     if (invoice) {
       if (newListData.length === 0) {
-        newListData = [...listData.filter((el) => el.invoice.includes(invoice.trim()))];
+        newListData = [...listData.filter((el) => el.invoice && el.invoice.includes(invoice.trim()))];
       } else if (newListData.length > 0) {
-        newListData = [...newListData.filter((el: any) => el.invoice.includes(invoice.trim()))];
+        newListData = [...newListData.filter((el: any) => el.invoice && el.invoice.includes(invoice.trim()))];
       }
     }
     const uniqueArr = [...new Set(newListData.map((obj) => JSON.stringify(obj)))].map((str) => JSON.parse(str));

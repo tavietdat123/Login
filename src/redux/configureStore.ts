@@ -16,7 +16,7 @@ const composeEnhancers =
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['photo', 'payroll'],
+  blacklist: ['photo'],
 };
 
 export default function configureStore(preloadedState: any) {

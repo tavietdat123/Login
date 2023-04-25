@@ -6,6 +6,7 @@ import intlReducer, { IntlState } from '../../modules/intl/redux/intlReducer';
 import SignUpReducer, { InitSignup } from './reducerSignUp';
 import photoReducer, { IntlPhoto } from '../../modules/photo/redux/reducer';
 import payrollReducer, { intlPayroll } from '../../modules/table/redux/reducer';
+import reducerProfile, { IntlProfile } from '../../modules/profile/redux/reducerProfile';
 
 export interface AppState {
   router: RouterState;
@@ -14,6 +15,7 @@ export interface AppState {
   sigup: InitSignup;
   photo: IntlPhoto;
   payroll: intlPayroll;
+  infouser: IntlProfile;
 }
 
 export default function createRootReducer(history: History) {
@@ -24,5 +26,6 @@ export default function createRootReducer(history: History) {
     signup: SignUpReducer,
     photo: photoReducer,
     payroll: payrollReducer,
+    infouser: reducerProfile,
   });
 }

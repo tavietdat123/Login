@@ -9,6 +9,8 @@ const LoginPage = lazy(() => import('./modules/auth/pages/LoginPage'));
 const SignUpPage = lazy(() => import('./modules/auth/pages/SignUpPage'));
 const Photo = lazy(() => import('./modules/photo/pages/PhotoPage'));
 const Filter = lazy(() => import('./modules/table/page/Filter'));
+const ProfilePage = lazy(() => import('./modules/profile/page'));
+const DetailProduct = lazy(() => import('./modules/table/page/DetailProduct'));
 
 interface Props {}
 
@@ -20,11 +22,13 @@ export const Routes = (props: Props) => {
       <Switch location={location}>
         <Route path={ROUTES.login} component={LoginPage} />
         <ProtectedRoute path={ROUTES.home} component={HomePage} />
+        <ProtectedRoute path={ROUTES.profile} component={ProfilePage} />
         <Route path={ROUTES.contact} component={ContactPage} />
         <Route path={ROUTES.signup} component={SignUpPage} />
         <Route path={ROUTES.photo} component={Photo} />
-        <Route path={ROUTES.filter} component={Filter} />
-        <Route path="/" component={HomePage} />
+        <ProtectedRoute path={`${ROUTES.detail}/:id`} component={DetailProduct} />
+        <ProtectedRoute path={ROUTES.product} component={Filter} />
+        <Route path="/" component={LoginPage} />
       </Switch>
     </Suspense>
   );

@@ -1,10 +1,11 @@
 import { Col, Row } from 'react-bootstrap';
 import './FilterComponent.scss';
-import { memo, useState, ChangeEvent, MouseEvent } from 'react';
+import { memo, useState, ChangeEvent, MouseEvent, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { clientSelector, statusSelector } from '../redux/selector';
 import { toast } from 'react-toastify';
 import { getFilter } from '../redux/action';
+import { setColorStatus } from './ProductDialog';
 export interface FormData {
   client: string;
   status: string;
@@ -30,6 +31,17 @@ function FilterComponent() {
   const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+  useEffect(() => {
+    dispatch(
+      getFilter({
+        client: '',
+        status: '',
+        dateFrom: '',
+        dateTo: '',
+        invoice: '',
+      }),
+    );
+  }, [dispatch]);
   const handleClear = (e: MouseEvent<HTMLButtonElement>) => {
     setFormData({
       client: '',
@@ -48,17 +60,7 @@ function FilterComponent() {
       }),
     );
   };
-  const color = (data: string) => {
-    if (data === 'Pending') {
-      return '#555';
-    } else if (data === 'Fulfilled') {
-      return '#54b291';
-    } else if (data === 'Processing') {
-      return '#ffdcab';
-    } else if (data === 'Received') {
-      return '#4faece';
-    }
-  };
+
   const handleSearch = () => {
     const date1 = new Date(dateFrom);
     const date2 = new Date(dateTo);
@@ -98,7 +100,7 @@ function FilterComponent() {
             <option value="">Status</option>
             {statusList.map((el, index) => {
               return (
-                <option key={index} style={{ color: color(el) }} value={el}>
+                <option key={index} style={{ color: setColorStatus(el) }} value={el}>
                   {el}
                 </option>
               );
