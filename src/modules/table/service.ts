@@ -7,35 +7,35 @@ const token = Cookies.get(ACCESS_TOKEN_KEY);
 export const getPayrollService = () => {
   return axios.get(API_PATHS.product, {
     headers: {
-      Authorization: token,
+      Authorization: Cookies.get(ACCESS_TOKEN_KEY),
     },
   });
 };
 export const getPayrollByIdService = (id: number) => {
   return axios.get(API_PATHS.product + '/' + id, {
     headers: {
-      Authorization: token,
+      Authorization: Cookies.get(ACCESS_TOKEN_KEY),
     },
   });
 };
 export const postPayrollService = (data: FormDataCreateProduct) => {
   return axios.post(API_PATHS.product, data, {
     headers: {
-      Authorization: token,
+      Authorization: Cookies.get(ACCESS_TOKEN_KEY),
     },
   });
 };
 export const deletePayrollService = (data: number) => {
   return axios.delete(API_PATHS.product + '/' + data, {
     headers: {
-      Authorization: token,
+      Authorization: Cookies.get(ACCESS_TOKEN_KEY),
     },
   });
 };
 export const putPayrollService = (data: FormDataCreateProduct) => {
   return axios.put(API_PATHS.product, data, {
     headers: {
-      Authorization: token,
+      Authorization: Cookies.get(ACCESS_TOKEN_KEY),
     },
   });
 };

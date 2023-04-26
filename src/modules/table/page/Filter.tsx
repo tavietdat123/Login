@@ -21,7 +21,8 @@ function Filter() {
   };
   useEffect(() => {
     dispatch(getPayroll());
-  }, [dispatch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <Container fluid>
       <Row className="w-100 d-flex justify-content-center align-items-center mt-3">

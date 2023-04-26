@@ -1,3 +1,4 @@
+import { LOG_OUT } from '../../profile/redux/actionProfile';
 import { FormData } from '../component/FilterComponent';
 import {
   DELETE_PAYROLL_SUCCESS,
@@ -92,6 +93,9 @@ export default function payrollReducer(state: intlPayroll = intlPayroll, action:
         ...state,
         currentProduct: action.payload,
       };
+    case LOG_OUT:
+      console.log('test');
+      return intlPayroll;
     default:
       return state;
   }

@@ -6,7 +6,7 @@ const token = Cookies.get(ACCESS_TOKEN_KEY);
 export const getInfoUserService = () => {
   return axios.get(API_PATHS.profile, {
     headers: {
-      Authorization: token,
+      Authorization: Cookies.get(ACCESS_TOKEN_KEY),
     },
   });
 };
@@ -14,7 +14,7 @@ export const updateAvatarFileService = (data: any) => {
   return axios.put(API_PATHS.profile, data, {
     headers: {
       'content-type': 'multipart/form-data',
-      Authorization: token,
+      Authorization: Cookies.get(ACCESS_TOKEN_KEY),
     },
   });
 };

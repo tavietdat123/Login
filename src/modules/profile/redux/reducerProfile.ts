@@ -41,20 +41,7 @@ export default function reducerProfile(state: IntlProfile = intlProfile, action:
         infoUser: action.payload,
       };
     case LOG_OUT:
-      return {
-        infoUser: {
-          id: 0,
-          email: '',
-          name: '',
-          gender: '',
-          avatar: '',
-          region: 0,
-          state: 0,
-          description: '',
-          createdAt: '',
-          updatedAt: '',
-        },
-      };
+      return intlProfile;
     default:
       return state;
   }
