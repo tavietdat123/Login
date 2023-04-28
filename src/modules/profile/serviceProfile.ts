@@ -2,7 +2,6 @@ import axios from 'axios';
 import { API_PATHS } from '../../configs/api';
 import Cookies from 'js-cookie';
 import { ACCESS_TOKEN_KEY } from '../../utils/constants';
-const token = Cookies.get(ACCESS_TOKEN_KEY);
 export const getInfoUserService = () => {
   return axios.get(API_PATHS.profile, {
     headers: {

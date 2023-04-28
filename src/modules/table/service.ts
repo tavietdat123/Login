@@ -3,7 +3,6 @@ import { API_PATHS } from '../../configs/api';
 import Cookies from 'js-cookie';
 import { ACCESS_TOKEN_KEY } from '../../utils/constants';
 import { FormDataCreateProduct } from './component/ProductDialog';
-const token = Cookies.get(ACCESS_TOKEN_KEY);
 export const getPayrollService = () => {
   return axios.get(API_PATHS.product, {
     headers: {
